@@ -1,0 +1,26 @@
+try
+{
+if(den==0)
+throw 0;(throw any data type)
+}
+catch(int k) //int because 0(int) is thrown
+{
+executed if something thrown
+}
+catch(...)
+{
+other than integer throwing
+}
+
+During throwing, the stack unwinding takes place
+in which the top function of stack consisting
+of catch statement get executed and ends the other part.
+
+DYNAMIC MEMORY ALLOCATION
+Dynamic memory allocation is done inside heap.
+in C++ int *p=new int[size];
+Now here comes a memory leak that take place in heap
+,to avoid this after use of memory it should be deallocated
+by delete (p);
+Now it's not worth to use a deallocated memory
+therefore p=NULL
