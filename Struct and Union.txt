@@ -4,7 +4,7 @@ public by default
 int a;
 int b;
 };
-f temp; access by f.a and f.b [c mandatory struct f temp]
+f temp; access by f.a and f.b [In c language mandatory struct f temp]
 or
 f temp={2,4};
 or
@@ -27,10 +27,10 @@ print()
 cout<<x<<y;
 }
 };
+
 f p={3,8};
 p.print()
 
-intel arch 64 on linux
 struct c1
 {
 char x;
@@ -43,6 +43,8 @@ char x;
 double z;
 char y;
 };
+Due to different allignment size of above two structs are different 
+
 size of union is equal to the largest sized member only
 union test
 {
@@ -52,5 +54,5 @@ int b;
 test t1;
 t1.a=10 Hence t1.b is also 10 because they are allocated in same memory
 
-Size of struct(padding)
+Size of struct(padding) in intel arch 64 on linux
 https://www.geeksforgeeks.org/is-sizeof-for-a-struct-equal-to-the-sum-of-sizeof-of-each-member/
