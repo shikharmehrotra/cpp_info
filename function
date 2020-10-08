@@ -1,0 +1,27 @@
+int f(int a ,int b,int c=0)
+{
+return (a+b+c);
+}
+cout<<f(10,20); 30
+cout<<f(10,20,30); 60
+cout<<f(10) error
+Similarly if f(int a,int b=0,int c) then f(10,20) gives error.
+
+Infinite recursion results in stackoverflow error.
+
+int &f()
+{
+static int x=10//x get modified in two function call auto is default data type
+return x;
+}
+int main()
+{
+int &z=f();
+cout<<f();
+z=80// z refers to f() hence modification to any of them has a modification in both
+cout<<f();
+//output 10 80
+}
+
+*&x means dereferencing x
+*p++ -> *(p++)
