@@ -51,3 +51,6 @@ int b;
 };
 test t1;
 t1.a=10 Hence t1.b is also 10 because they are allocated in same memory
+
+Size of struct(padding)
+https://www.geeksforgeeks.org/is-sizeof-for-a-struct-equal-to-the-sum-of-sizeof-of-each-member/
