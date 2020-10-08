@@ -1,0 +1,53 @@
+struct f
+{
+public by default
+int a;
+int b;
+};
+f temp; access by f.a and f.b [c mandatory struct f temp]
+or
+f temp={2,4};
+or
+f temp={.y=4 ,.x=2};
+f temp={2,4};
+f *v=temp;
+v->x=(*v).x
+
+struct f
+{
+int x;
+int y;
+f(int a,int b)//constructor for initializing private variable since x y are public no need of constructor
+{
+x=a;
+y=b;
+}
+print()
+{
+cout<<x<<y;
+}
+};
+f p={3,8};
+p.print()
+
+intel arch 64 on linux
+struct c1
+{
+char x;
+char y;
+double z;
+};
+struct c2
+{
+char x;
+double z;
+char y;
+};
+size of union is equal to the largest sized member only
+union test
+{
+int a;
+int b;
+};
+test t1;
+t1.a=10 Hence t1.b is also 10 because they are allocated in same memory
