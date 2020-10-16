@@ -23,4 +23,8 @@ Now here comes a memory leak that take place in heap
 ,to avoid this after use of memory it should be deallocated
 by delete (p);
 Now it's not worth to use a deallocated memory
-therefore p=NULL
+therefore p=NULL(Doing this because so as to not pointing to a variable random location ,Hence NULL is used)
+cout<<p; //0
+
+We cannot dereference void pointer.
+
