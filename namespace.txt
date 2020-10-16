@@ -9,3 +9,7 @@ int fun(int)
 return 1;
 };
 Accessing t1::fun(4) //::scope resolution
+
+//using directive use
+using namespace t1;
+avoids us to write t1::every place.
