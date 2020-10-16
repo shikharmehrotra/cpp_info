@@ -1,0 +1,11 @@
+Using the same instances of a function generates a compilation error.
+Namespace become handy.
+namespace t1{
+int fun(int)
+return 1;
+};
+namespace t2{
+int fun(int)
+return 1;
+};
+Accessing t1::fun(4) //::scope resolution
