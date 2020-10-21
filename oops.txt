@@ -1,0 +1,108 @@
+template<typename T>
+T max(T a,T B)
+return (a>b)?a:b;
+
+//Accessing
+//max<int>(45,40)
+//max(23.0,232.0)
+
+struct Point{
+int x;
+int y;
+bool operator>(const Point &k)
+this->x > k.x;//overloading operator
+this ->y
+};
+//we can use T as Point but we have to overloaded operator'>'
+//because compiler would be confused between which to choose from x and y 
+
+inline int a(){return 1+1;} //it is a request to compiler
+#define a() 1+1;
+both replaces but inline replace with 2 and define replace with 1+1
+
+Class is a user-defined prototype from which different objects are derived
+
+Features of OOPS:
+Inheritance:Inheriting properties from different class. (Derived class gets inheritance from Base class)
+Suppose there is a "sport" class , and "football","cricket" classes are derived from it.
+
+Polymorphism: (existence in different forms) Suppose a person can be a child,father at the same time.
+int add(int a,int b)
+return a+b;
+int add(int a,int b,int c)
+return a+b+c;
+add exist in two prototypes
+
+Abstraction:Extracting the details of something without background info.(implementation hiding).
+
+Encapsulation:Capsuling data in a single unit.Simply it is collection of data within a single scope(private) giving feature of data-hiding.
+
+Declaration of class:
+
+#include <iostream>
+
+using namespace std;
+class student
+{
+    protected:
+    int pro;//it can only be shared within the scope of derived class of student
+    private:
+    int test=100;
+ public:
+ int x;
+ void set_private(int a);
+ void print();
+ student()//constructor for initializing variables
+ {
+     x=12;
+ }
+ student(int a)//constructor overloading
+ {
+     x=a;
+ }
+ student(int a,int b)
+ {
+   this->x=a;
+   this->test=b;
+ }
+ friend class frndz;//it can access all private and public member of student class
+ ~student()
+ {
+     //destructor called mainly to avoid accessing the deallocated memory which would lead to memory leak
+     //by delete []a;
+ }
+};
+
+
+//derived class of student
+class child : public student
+{
+    public:
+    void print()
+    {
+        cout<<pro;
+    }
+};
+
+
+void student::print()
+{
+    cout<<test;
+}
+void student::set_private(int a)
+{
+    test=a;
+}
+int main() {
+   student obj;
+   obj.x=23;
+   //obj.test result error
+   student obj1(222,23);//overloaded constructor called
+   //obj1.print();
+   student *obj2=new student(23,222);//this is useful in this case 
+  obj2->print();//accessing by ->
+  
+ 
+}
+
+
